@@ -13,7 +13,7 @@ export function useFetch(url) {
         try {
             const res = await fetch(url.value);
             if (!res.ok) {
-                throw new Error(`Error en fer la petició: ${res.status}`);
+                throw new Error(`Error al hacer la petición: ${res.status}`);
             }
             data.value = await res.json();
 
