@@ -1,4 +1,5 @@
 import { onMounted, ref } from "vue";
+import { watch } from "vue";
 
 export function useFetch(url) {
     const data = ref(null)
@@ -23,6 +24,10 @@ export function useFetch(url) {
         }
 
     }
+
+    watch(url, () => {
+    fetchData();
+    });
 
 
     onMounted(fetchData);

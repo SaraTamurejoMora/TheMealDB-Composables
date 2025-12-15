@@ -15,8 +15,9 @@ const { data, error, loading, fetchData } = useFetch(url);
 
 
 const buscarCategoriaMeal =(categoria)=>{
-    url.value = (`https://www.themealdb.com/api/json/v1/1/search.php?s=${categoria.value}`)
-}
+    url.value = (`https://www.themealdb.com/api/json/v1/1/search.php?s=${categoria}`)
+    fetchData()
+  }
 
 </script>
 
